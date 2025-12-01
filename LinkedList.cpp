@@ -29,6 +29,20 @@ class LinkedList{
             temp=temp->next;
         }
     }
+    void insertAtEnd(int val){
+        Node* newNode = new Node(val);
+        if(head == nullptr){
+            head = newNode;
+            return;
+        }
+        else{
+            Node* temp = head;
+            while(temp->next != nullptr){
+                temp=temp->next;
+            }
+            temp->next=newNode;
+        }
+    }
 } ;
 
 int main(){
